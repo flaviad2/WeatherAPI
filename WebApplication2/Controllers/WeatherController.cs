@@ -185,6 +185,7 @@ namespace WebApplication2.Controllers
         //obiectul editat il pun in header
         //data ca parametru si nu trebuie pusa neaparat in obiect 
 
+        //nu se pune id, data, source in json dat ca req
         [HttpPut]
         [Route("api/[controller]/for_day/{date}/{source}")]
         public IActionResult EditWeather(DateTime date, SourceEnum source, WeatherRequest weatherRequest)
@@ -192,8 +193,9 @@ namespace WebApplication2.Controllers
             WeatherEntity weather = Converter.requestToWeather(weatherRequest); 
             weather.DataSource = source;
             weather.Date = date;
-            if (_weatherData.EditWeatherFromDayFromSource(date, source,weather) != null)
-                return Ok(Converter.weatherToResponseElem(weather));
+            var result = _weatherData.EditWeatherFromDayFromSource(date, source, weather);
+            if (result != null)
+                return Ok(Converter.weatherToResponseElem(result));
             else return NotFound($"Weather for day {date} and source {source} was not found");
 
 

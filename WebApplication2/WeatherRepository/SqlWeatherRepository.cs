@@ -99,10 +99,12 @@ namespace WebApplication2.WeatherRepository
         {
 
 
-            WeatherEntity oldWeather = _weatherContext.WeatherForecasts.Where(w => w.Date == date && w.DataSource == source).FirstOrDefault(); 
-          if(oldWeather != null)
+            WeatherEntity oldWeather = _weatherContext.WeatherForecasts.Where(w => w.Date == date && w.DataSource == source).FirstOrDefault();
+            int id = oldWeather.Id;
+            if(oldWeather != null)
             {
-                oldWeather.Id = weather.Id; 
+                oldWeather.Id = id; 
+                oldWeather.Id = oldWeather.Id;
                 oldWeather.Date = weather.Date;
                 oldWeather.Time = weather.Time;
                 oldWeather.MinimumTemperature = weather.MinimumTemperature;
