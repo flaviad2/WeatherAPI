@@ -56,6 +56,10 @@ namespace WebApplication2.WeatherRepository
             OtherInformation = otherInformation;
             DataSource = dataSource;
         }
+
+        public WeatherEntity()
+        {
+        }
     }
 
 }

@@ -11,7 +11,12 @@ namespace WebApplication2.WeatherRepository
         {
 
         }
+        public WeatherContext()
+        {
 
+        }
+
+       
         public DbSet<WeatherEntity> WeatherForecasts { get; set; }
 
     }

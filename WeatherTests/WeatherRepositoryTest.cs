@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace WeatherTests
 {
     public class WeatherRepositoryTest
     {
-        //[Fact]
+        [Fact]
         public void GetAllTest()
         {
 
         }
+        
     }
 }

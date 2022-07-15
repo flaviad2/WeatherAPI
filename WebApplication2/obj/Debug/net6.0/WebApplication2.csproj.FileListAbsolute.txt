@@ -65,3 +65,9 @@ C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\obj\Debug\
 C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.pdb
 C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\obj\Debug\net6.0\WebApplication2.genruntimeconfig.cache
 C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\obj\Debug\net6.0\ref\WebApplication2.dll
+C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\bin\Debug\net6.0\NPOI.OOXML.dll
+C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\bin\Debug\net6.0\NPOI.OpenXml4Net.dll
+C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\bin\Debug\net6.0\NPOI.OpenXmlFormats.dll
+C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\bin\Debug\net6.0\NPOI.dll
+C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\ANTONIA.DOROBAT\source\repos\WebApplication2\WebApplication2\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll

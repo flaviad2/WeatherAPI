@@ -33,7 +33,7 @@ namespace WebApplication2.WeatherRepository
 
 
         /* adauga o prognoza pentru o anumita zi urmatoare si arunca eroare daca ziua este invalida*/
-        WeatherEntity AddWeatherWithDate(DateTime date, WeatherEntity weather);
+        WeatherEntity AddWeatherWithDate(DateTime date, WeatherEntity weathe);
 
 
 

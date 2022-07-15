@@ -24,6 +24,7 @@ namespace WebApplication2.Controllers
 
         }
 
+        /*
         //get all 
         [HttpGet]
         [Route("api/[controller]")]
@@ -35,7 +36,7 @@ namespace WebApplication2.Controllers
             else
                 return NoContent();
 
-        }
+        } */
 
 
 

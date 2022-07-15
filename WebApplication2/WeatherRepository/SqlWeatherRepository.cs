@@ -10,6 +10,11 @@ namespace WebApplication2.WeatherRepository
         {
             _weatherContext = context;
         }
+
+        public WeatherContext GetWeatherContext()
+        {
+            return _weatherContext; 
+        }
         public WeatherEntity AddWeather(WeatherEntity weather)
         {
            _weatherContext.WeatherForecasts.Add(weather);
@@ -57,14 +62,19 @@ namespace WebApplication2.WeatherRepository
             return weather; 
         }
 
-
+        
         public List<WeatherEntity> getWeathers()
         {
-           return  _weatherContext.WeatherForecasts.ToList();
-
+            return _weatherContext.WeatherForecasts.ToList();
+           
             
-        }
-        public List<WeatherEntity> GetWeathersBetweenDates(DateTime date1, DateTime date2)
+        } 
+        
+
+
+        
+
+    public List<WeatherEntity> GetWeathersBetweenDates(DateTime date1, DateTime date2)
         {
             return _weatherContext.WeatherForecasts.Where(w => w.Date >= date1 && w.Date <= date2).ToList();
         }
@@ -103,7 +113,7 @@ namespace WebApplication2.WeatherRepository
             int id = oldWeather.Id;
             if(oldWeather != null)
             {
-                oldWeather.Id = id; 
+                
                 oldWeather.Id = oldWeather.Id;
                 oldWeather.Date = weather.Date;
                 oldWeather.Time = weather.Time;
@@ -121,5 +131,19 @@ namespace WebApplication2.WeatherRepository
             return null;
 
         }
+
+        public async  Task<RepoResponse<List<WeatherEntity>>> GetAll()
+        {
+            var repoResponse = new RepoResponse<List<WeatherEntity>>();
+            var dbWeathers =  _weatherContext.WeatherForecasts.ToList();
+            repoResponse.info = dbWeathers;
+            return repoResponse; 
+
+        
+        }
+
+      
+
+        
     }
 }
